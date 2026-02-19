@@ -2,7 +2,7 @@ import { useState } from "react";
 import TimerCompontent from "../components/TimerCompontent";
 import Grid from "../components/Grid";
 import { useNavigate } from "react-router-dom";
-import { Diff } from "lucide-react";
+
 import DifficultySelector from "../components/DifficultySelector";
 const MAX_LEVEL = 10;
 export type Difficulty = "easy" | "medium" | "hard" | "expert";
@@ -71,7 +71,7 @@ const Game = () => {
             <h1 className="text-xl md:text-2xl text-orange-600 drop-shadow-md mb-6">
                 FIND THE FOX
             </h1>
-            <div className="flex gap-2">
+            <div className="flex flex-col md:flex-row gap-2 items-center">
                 {/* Level */}
                 <div className="bg-white/80 px-6 py-3 rounded-2xl shadow-lg border-2 border-white mb-4 text-xs">
                     LEVEL {level}
@@ -119,7 +119,7 @@ const Game = () => {
 
             {/* Game Over Overlay */}
             {gameStatus === "lost" && (
-                <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/40 backdrop-blur-sm text-center">
+                <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/40 backdrop-blur-sm text-center z-50">
                     <div className="bg-white p-10 rounded-3xl shadow-2xl text-center">
                         <h2 className="text-red-500 mb-6 animate-bounce">
                             TIME'S UP!
@@ -144,7 +144,7 @@ const Game = () => {
             )}
             {/*  Game Won Overlay */}
             {gameStatus === "won" && (
-                <div className="absolute inset-0 flex items-center justify-center bg-black/40 backdrop-blur-sm">
+                <div className="absolute inset-0 flex items-center justify-center bg-black/40 backdrop-blur-sm z-50">
                     <div className="bg-white p-10 rounded-3xl shadow-2xl text-center">
                         <h2 className="text-green-500 mb-6 animate-bounce">
                             YOU WON!
@@ -161,7 +161,7 @@ const Game = () => {
             )}
             {/* Start overlay */}
             {gameStatus === "starting" && (
-                <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/50 backdrop-blur-md text-center">
+                <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/50 backdrop-blur-md text-center z-50">
                     <div className="bg-white p-12 rounded-3xl shadow-2xl">
                         <h2 className="text-orange-600 text-lg mb-8 animate-bounce">
                             READY TO FIND THE FOX?

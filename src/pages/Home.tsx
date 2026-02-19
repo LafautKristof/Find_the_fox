@@ -9,8 +9,8 @@ const Home = () => {
             style={{ fontFamily: '"Press Start 2P", cursive' }}
         >
             {/*  Glow blobs */}
-            <div className="absolute w-[600px] h-[600px] bg-yellow-300 opacity-20 rounded-full blur-3xl animate-pulse top-[-200px] left-[-200px]" />
-            <div className="absolute w-[500px] h-[500px] bg-pink-400 opacity-20 rounded-full blur-3xl animate-pulse bottom-[-150px] right-[-150px]" />
+            <div className="absolute w-[600px] h-[600px] z-0 bg-yellow-300 opacity-20 rounded-full blur-3xl animate-pulse top-[-200px] left-[-200px]" />
+            <div className="absolute w-[500px] h-[500px] z-0 bg-pink-400 opacity-20 rounded-full blur-3xl animate-pulse bottom-[-150px] right-[-150px]" />
 
             {/*  Subtle particles */}
             <div className="absolute inset-0 pointer-events-none">
