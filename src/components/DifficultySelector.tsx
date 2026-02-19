@@ -11,12 +11,20 @@ const DifficultySelector = ({
         <select
             value={difficulty}
             onChange={(e) => setDifficulty(e.target.value as Difficulty)}
-            className="px-4 py-2 rounded-xl border"
+            className="px-4 py-2 rounded-xl border cursor-pointer"
         >
-            <option value="easy">Easy</option>
-            <option value="medium">Medium</option>
-            <option value="hard">Hard</option>
-            <option value="expert">Expert</option>
+            <option className="cursor-pointer" value="easy">
+                Easy
+            </option>
+            <option className="cursor-pointer" value="medium">
+                Medium
+            </option>
+            <option className="cursor-pointer" value="hard">
+                Hard
+            </option>
+            <option className="cursor-pointer" value="expert">
+                Expert
+            </option>
         </select>
     );
 };

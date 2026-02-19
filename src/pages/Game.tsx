@@ -82,7 +82,7 @@ const Game = () => {
                 </div>
                 {/* Go HomePage */}
                 <button
-                    className="mb-6 px-6 py-3 bg-blue-400 hover:bg-blue-500 active:scale-95 transition-all duration-200 rounded-2xl text-white text-xs shadow-lg"
+                    className="mb-6 px-6 py-3 bg-blue-400 hover:bg-blue-500 active:scale-95 transition-all duration-200 rounded-2xl text-white text-xs shadow-lg cursor-pointer"
                     onClick={handleGoHome}
                 >
                     HomePage
@@ -92,7 +92,7 @@ const Game = () => {
             {gameStatus === "playing" && (
                 <button
                     onClick={handleStopGame}
-                    className="mb-6 px-6 py-3 bg-red-400 hover:bg-red-500 active:scale-95 transition-all duration-200 rounded-2xl text-white text-xs shadow-lg"
+                    className="mb-6 px-6 py-3 bg-red-400 hover:bg-red-500 active:scale-95 transition-all duration-200 rounded-2xl text-white text-xs shadow-lg cursor-pointer"
                 >
                     STOP GAME
                 </button>
@@ -126,7 +126,7 @@ const Game = () => {
                         </h2>
 
                         {/*  Difficulty Selector */}
-                        <div className="mb-6">
+                        <div className="mb-6 ">
                             <DifficultySelector
                                 difficulty={difficulty}
                                 setDifficulty={setDifficulty}
@@ -135,7 +135,7 @@ const Game = () => {
 
                         <button
                             onClick={handleReset}
-                            className="px-8 py-4 bg-orange-400 hover:bg-orange-500 rounded-2xl text-white"
+                            className="px-8 py-4 bg-orange-400 hover:bg-orange-500 rounded-2xl text-white cursor-pointer"
                         >
                             RESTART
                         </button>
@@ -177,7 +177,7 @@ const Game = () => {
 
                         <button
                             onClick={handleStartGame}
-                            className="px-10 py-4 bg-orange-400 hover:bg-orange-500 rounded-2xl text-white animate-pulse"
+                            className="px-10 py-4 bg-orange-400 hover:bg-orange-500 rounded-2xl text-white animate-pulse cursor-pointer"
                         >
                             START GAME
                         </button>

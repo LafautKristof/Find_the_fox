@@ -50,7 +50,7 @@ const Home = () => {
                 {/* Pulsing Button */}
                 <button
                     onClick={() => navigate("/game")}
-                    className="w-full py-4 rounded-2xl bg-orange-400 hover:bg-orange-500 active:scale-95 transition-all duration-200 text-white shadow-lg animate-pulse"
+                    className="w-full py-4 rounded-2xl bg-orange-400 hover:bg-orange-500 active:scale-95 transition-all duration-200 text-white shadow-lg animate-pulse cursor-pointer"
                 >
                     START GAME
                 </button>
