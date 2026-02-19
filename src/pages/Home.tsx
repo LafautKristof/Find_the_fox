@@ -41,10 +41,10 @@ const Home = () => {
                 />
 
                 <ul className="text-[10px] text-gray-800 space-y-3 mb-8 leading-relaxed">
-                    <li>• Zoek het woord FOX</li>
-                    <li>• Enkel horizontaal of verticaal</li>
-                    <li>• 1 oplossing per level</li>
-                    <li>• Tijd loopt... </li>
+                    <li>• Search the word FOX</li>
+                    <li>• Only horizontal or vertical words</li>
+                    <li>• 1 solution per level</li>
+                    <li>• Time is running... </li>
                 </ul>
 
                 {/* Pulsing Button */}
