@@ -52,19 +52,22 @@ const Grid = ({
             setSelected([]);
             return;
         }
-        const letters = cells.map((pos) => grid[pos.row][pos.col]).join("");
+
+        // Sorteer de cellen eerst op grid-positie
+        const sorted = [...cells].sort((a, b) =>
+            a.row === b.row ? a.col - b.col : a.row - b.row,
+        );
+
+        const letters = sorted.map((pos) => grid[pos.row][pos.col]).join("");
 
         if (letters === "FOX") {
             setFound(cells);
             setTimeout(() => {
                 onLevelUp();
             }, 400);
-            setSelected([]);
-        } else {
-            setTimeout(() => {
-                setSelected([]);
-            }, 200);
         }
+
+        setSelected([]);
     }
 
     return (
